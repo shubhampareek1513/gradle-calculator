@@ -8,13 +8,6 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-        stage('validate code') {
-            agent { docker 'gradle:slave1' } 
-            steps {
-                withGradle {jdk: 'localjdk', gradle: 'localgradle'
-  
-                             }
-            }
-        }
+       
     }
 }
